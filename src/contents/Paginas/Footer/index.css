@@ -1,87 +1,95 @@
 .footer {
-    background-color: #0d9170;
-    color: #fff;
-    padding: 40px 0;
-  }
-  
+  background-color: #0d9170;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+
+.logo-section {
+  flex: 2;
+}
+
+.footer-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Seção inferior do footer */
+.footer-bottom {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+.social-icon {
+  color: #fff;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  color: #ddd;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
   }
-  
-  .footer-section {
-    flex: 1;
-    margin: 10px 20px;
-  }
-  
-  .footer-section h4 {
-    margin-bottom: 20px;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
 
-
-  .logo-section {
-    flex: 2;
-  }
-  
-  .footer-logo {
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
-  
-  /* Seção inferior do footer */
   .footer-bottom {
-    border-top: 1px solid #fff;
-    padding-top: 20px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .footer-bottom p {
-    margin: 0;
-  }
-  
 
-  
-  
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-    }
-  
-    .footer-bottom {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .footer-bottom-right a {
-      margin: 10px 0;
-    }
+  .footer-bottom-right a {
+    margin: 10px 0;
   }
-  
+}

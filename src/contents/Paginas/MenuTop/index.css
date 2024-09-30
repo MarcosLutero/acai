@@ -126,6 +126,9 @@
 .link_paginas:hover {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
+    
 }
 
 /* Estilização adicional no mobile */

@@ -6,10 +6,7 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                {/* Seção do logotipo */}
-                <div className="footer-section logo-section">
-                    <img src={logo} alt="Logo IBM" className="footer-logo" />
-                </div>
+
 
                 {/* Seções de links */}
                 <div className="footer-section">
@@ -45,11 +42,17 @@ function Footer() {
 
                 <div className="footer-section">
                     <h4><strong>Siga-nos nas redes sociais</strong></h4>
-                    <ul>
-                        <li><a href="#"><i className="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"> <i className="fa-brands fa-instagram"></i></a></li>
-                    </ul>
+                    <div className="d-flex justify-content-evenly align-items-center social-icons">
+                        <a href="#" className="social-icon">
+                            <i className="fab fa-linkedin" />
+                        </a>
+                        <a href="#" className="social-icon">
+                            <i className="fab fa-facebook" />
+                        </a>
+                        <a href="#" className="social-icon">
+                            <i className="fab fa-instagram" />
+                        </a>
+                    </div>
                 </div>
             </div>
 
