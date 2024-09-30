@@ -1,0 +1,132 @@
+.secondary_nav {
+    background-color: #3c7d67;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #3c7d67;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaçamento entre o texto e a seta */
+}
+
+.dropdown-arrow {
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, max-height 1s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+/* Estilos para o telefone e email com ícones */
+.phone-icon, .email-icon {
+    color: #fff;
+    margin-right: 8px; /* Adiciona um espaçamento entre o ícone e o texto */
+    font-size: 18px;
+}
+
+.phone, .email {
+    color: #fff;
+    margin: 0;
+}
+
+.phone-icon:hover, .email-icon:hover {
+    color: #ddd; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilos para os ícones de redes sociais */
+.social-icon {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #3c7d67; /* Cor do menu */
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  }
+  
+ 
+  
+  .main_nav {
+    background-color: #3c7d67; /* Cor do fundo */
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .secondary_nav {
+    background-color: #3c7d67; /* Cor do fundo para o menu superior */
+  }
+
+
+.main_nav {
+    background-color: #3c7d67;
+    text-decoration: #fff;
+}
+
+.img_logo {
+    width: 50px;
+    height: 50px;
+}
+
+.link_paginas {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.link_paginas:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilização adicional no mobile */
+@media screen and (max-width: 768px) {
+    .language-select {
+      width: 100%;
+    }
+}
