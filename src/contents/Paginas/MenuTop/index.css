@@ -1,5 +1,11 @@
 .secondary_nav {
     background-color: #3c7d67;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondary_nav .navbar-nav {
+    width: 100%;
+    justify-content: space-around; /* Espaça os itens de forma uniforme */
 }
 
 .dropdown {
@@ -90,27 +96,25 @@
     background-color: #3c7d67; /* Cor do menu */
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
   }
-  
- 
-  
-  .main_nav {
-    background-color: #3c7d67; /* Cor do fundo */
-    transition: top 0.3s ease-in-out;
-  }
-  
-  .secondary_nav {
-    background-color: #3c7d67; /* Cor do fundo para o menu superior */
-  }
+
 
 
 .main_nav {
     background-color: #3c7d67;
     text-decoration: #fff;
+    padding: 10px 0; 
+    transition: top 0.3s ease-in-out;
 }
 
+.main_nav .navbar-nav {
+    width: 100%;
+    justify-content: space-around; /* Espaça os itens de forma uniforme */
+}
+
+
 .img_logo {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 72px;
 }
 
 .link_paginas {

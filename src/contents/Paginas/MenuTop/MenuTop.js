@@ -7,7 +7,7 @@ function MenuTop({ onLanguageChange }) {
 
   const handleScroll = () => {
     const offset = window.pageYOffset;
-    if (offset > 100) { // Ponto em que o `main_nav` fica fixo
+    if (offset > 100) {
       setIsSticky(true);
     } else {
       setIsSticky(false);
@@ -19,7 +19,7 @@ function MenuTop({ onLanguageChange }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLanguageChange = (language) => {
+  const handleLanguageChange = language => {
     onLanguageChange(language);
     toggleDropdown();
   };
@@ -33,54 +33,50 @@ function MenuTop({ onLanguageChange }) {
     <>
       <nav className="navbar navbar-expand-lg secondary_nav">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col">
+          <div className="row w-100">
+            {/* Idioma, Telefone e E-mail */}
+            <div className="col d-flex justify-content-evenly align-items-center">
               <div className="dropdown">
                 <button className="dropdown-button" onClick={toggleDropdown}>
                   Português
                   <i className="fa fa-angle-down dropdown-arrow" />
                 </button>
                 <div className="dropdown-content" id="dropdownContent">
-                  <a href="#" onClick={() => handleLanguageChange("en")}>
-                    Inglês
-                  </a>
-                  <a href="#" onClick={() => handleLanguageChange("es")}>
-                    Espanhol
-                  </a>
-                  <a href="#" onClick={() => handleLanguageChange("it")}>
-                    Italiano
-                  </a>
-                  <a href="#" onClick={() => handleLanguageChange("zh")}>
-                    Mandarim
-                  </a>
+                  <a href="#" onClick={() => handleLanguageChange("en")}>Inglês</a>
+                  <a href="#" onClick={() => handleLanguageChange("es")}>Espanhol</a>
+                  <a href="#" onClick={() => handleLanguageChange("it")}>Italiano</a>
+                  <a href="#" onClick={() => handleLanguageChange("zh")}>Mandarim</a>
                 </div>
               </div>
-            </div>
-            <div className="col d-flex align-items-center">
-              <i className="fa fa-phone phone-icon"></i>
-              <p className="phone m-0">(85) 99630-8944</p>
-            </div>
-            <div className="col d-flex align-items-center">
-              <i className="fa fa-envelope email-icon"></i>
-              <p className="email m-0">Contato@xingufruit.com.br</p>
-            </div>
-            <div className="col d-flex justify-content-end">
-              <a href="#" className="social-icon">
-                <i className="fab fa-linkedin" />
-              </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-facebook" />
-              </a>
-              <a href="#" className="social-icon">
-                <i className="fab fa-instagram" />
-              </a>
+
+              <div className="d-flex align-items-center">
+                <i className="fa fa-phone phone-icon"></i>
+                <p className="phone m-0">(85) 99630-8944</p>
+              </div>
+
+              <div className="d-flex align-items-center">
+                <i className="fa fa-envelope email-icon"></i>
+                <p className="email m-0">Contato@xingufruit.com.br</p>
+              </div>
+
+              {/* Ícones de redes sociais à direita */}
+              <div className="d-flex justify-content-end align-items-center social-icons">
+                <a href="#" className="social-icon">
+                  <i className="fab fa-linkedin" />
+                </a>
+                <a href="#" className="social-icon">
+                  <i className="fab fa-facebook" />
+                </a>
+                <a href="#" className="social-icon">
+                  <i className="fab fa-instagram" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* `main_nav` recebe a classe sticky quando rolar */}
-      <nav className={`navbar navbar-expand-lg main_nav ${isSticky ? 'sticky-nav' : ''}`}>
+      <nav className={`navbar navbar-expand-lg main_nav ${isSticky ? "sticky-nav" : ""}`}>
         <div className="container">
           <a className="navbar-brand" href="#">
             <img className="img_logo" src={logo} alt="logo" />
@@ -88,44 +84,28 @@ function MenuTop({ onLanguageChange }) {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Home
-                </a>
+                <a className="nav-link link_paginas" href="#">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Sobre Xingu Fruit
-                </a>
+                <a className="nav-link link_paginas" href="#">Sobre Xingu Fruit</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Produtos
-                </a>
+                <a className="nav-link link_paginas" href="#">Produtos</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Certificações
-                </a>
+                <a className="nav-link link_paginas" href="#">Certificações</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Sustentabilidade
-                </a>
+                <a className="nav-link link_paginas" href="#">Sustentabilidade</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Receitas
-                </a>
+                <a className="nav-link link_paginas" href="#">Receitas</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Noticias
-                </a>
+                <a className="nav-link link_paginas" href="#">Noticias</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">
-                  Contato
-                </a>
+                <a className="nav-link link_paginas" href="#">Contato</a>
               </li>
             </ul>
           </div>
