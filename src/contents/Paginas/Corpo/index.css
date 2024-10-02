@@ -1,93 +1,100 @@
+@font-face {
+    font-family: 'Brush Up';
+    src: url('../../Fonts/brush-up.otf') format('opentype');
+  }
+
 .img_corpo {
     width: 100vw;
     height: auto;
 }
 
 h2 {
-    text-transform: uppercase;
-    color: #4B0082;
-    display: block;
+    color: #59133c;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-family: 'Brush Up', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.4rem;
 }
 
 p {
-    font-family: 'Nunito', sans-serif;
     text-align: justify;
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    font-family: 'Georgia', serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-size: 18px;
+    color: #000000;
     line-height: 1.6;
 }
 
+.titulo{
+    margin-bottom: 30px;
+}
 
-.acaiXingu-img {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-    unicode-bidi: isolate;
-    opacity: 0;
-    transform: translateX(-100px);
+.titulo-produto{
+    margin-top: 30px
+}
+
+.titulo,.acaiXingu-img, .produtos-img{
+    transform: translateX(-100px); /* Inicialmente fora da tela à esquerda */
+    opacity: 0; /* Invisível inicialmente */
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
-.acaiXingu-img.visible {
-    opacity: 1;
-    transform: translateX(0);
+.titulo.visible, .descricao.visible, .acaiXingu-img.visible, .produtos-img.visible{
+    transform: translateX(0); /* Move para a posição original */
+    opacity: 1; /* Torna-se visível */
+}
+.descricao{
+    transform: translateX(-100px); /* Inicialmente fora da tela à esquerda */
+    opacity: 0; /* Invisível inicialmente */
+    transition: transform 1s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.certificacoes-img{
+    width: 98.4px;
+    height: 98.4px;
 }
 
 
-.produtos-img {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-    unicode-bidi: isolate;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-}
 
-.produtos-img.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-
-.certificacoes-img {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
-}
-
-.certificacoes-img.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.botao-saiba-mais {
-    background-color: #0d9170;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Georgia', serif;
-    cursor: pointer;
-    text-transform: uppercase;
+.botao_verde {
     position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease;
-}
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Para comportar-se como botão */
+    margin-top: 20px; /* Espaçamento acima do botão */
+    transition: all 0.3s ease;
+  }
+  
+  .botao_verde::before {
+    content: "";
+    background-image: url("../../images/botao.svg");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .btn_txt {
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+    color: #fff; /* O texto será branco */
+    text-transform: uppercase; /* Força maiúsculas */
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none; /* Remove o sublinhado do texto */
+  }
+  
