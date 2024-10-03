@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import "./index.css";
 
@@ -19,7 +20,7 @@ function MenuTop({ onLanguageChange }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLanguageChange = language => {
+  const handleLanguageChange = (language) => {
     onLanguageChange(language);
     toggleDropdown();
   };
@@ -34,7 +35,6 @@ function MenuTop({ onLanguageChange }) {
       <nav className="navbar navbar-expand-lg secondary_nav">
         <div className="container">
           <div className="row w-100">
-            {/* Idioma, Telefone e E-mail */}
             <div className="col d-flex justify-content-evenly align-items-center">
               <div className="dropdown">
                 <button className="dropdown-button" onClick={toggleDropdown}>
@@ -42,10 +42,18 @@ function MenuTop({ onLanguageChange }) {
                   <i className="fa fa-angle-down dropdown-arrow" />
                 </button>
                 <div className="dropdown-content" id="dropdownContent">
-                  <a href="#" onClick={() => handleLanguageChange("en")}>Inglês</a>
-                  <a href="#" onClick={() => handleLanguageChange("es")}>Espanhol</a>
-                  <a href="#" onClick={() => handleLanguageChange("it")}>Italiano</a>
-                  <a href="#" onClick={() => handleLanguageChange("zh")}>Mandarim</a>
+                  <a href="#" onClick={() => handleLanguageChange("en")}>
+                    Inglês
+                  </a>
+                  <a href="#" onClick={() => handleLanguageChange("es")}>
+                    Espanhol
+                  </a>
+                  <a href="#" onClick={() => handleLanguageChange("it")}>
+                    Italiano
+                  </a>
+                  <a href="#" onClick={() => handleLanguageChange("zh")}>
+                    Mandarim
+                  </a>
                 </div>
               </div>
 
@@ -59,7 +67,6 @@ function MenuTop({ onLanguageChange }) {
                 <p className="email m-0">Contato@xingufruit.com.br</p>
               </div>
 
-              {/* Ícones de redes sociais à direita */}
               <div className="d-flex justify-content-end align-items-center social-icons">
                 <a href="#" className="social-icon">
                   <i className="fab fa-linkedin" />
@@ -84,28 +91,28 @@ function MenuTop({ onLanguageChange }) {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Home</a>
+                <Link className="nav-link link_paginas" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Sobre Xingu Fruit</a>
+                <Link className="nav-link link_paginas" to="/sobre">Sobre Xingu Fruit</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Produtos</a>
+                <Link className="nav-link link_paginas" to="/produtos">Produtos</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Certificações</a>
+                <Link className="nav-link link_paginas" to="/certificacoes">Certificações</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Sustentabilidade</a>
+                <Link className="nav-link link_paginas" to="/sustentabilidade">Sustentabilidade</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Receitas</a>
+                <Link className="nav-link link_paginas" to="/receitas">Receitas</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Noticias</a>
+                <Link className="nav-link link_paginas" to="/noticias">Noticias</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link link_paginas" href="#">Contato</a>
+                <Link className="nav-link link_paginas" to="/contato">Contato</Link>
               </li>
             </ul>
           </div>

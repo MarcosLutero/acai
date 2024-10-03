@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../images/logo-xingu2.png"
 import "./index.css"
 
 function Footer() {

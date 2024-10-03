@@ -144,7 +144,7 @@ function Corpo({ language }) {
           <div className=" row text-center">
             <h2>{translatedTexts.certificacoesTitle}</h2>
           </div>
-          <div className="row">
+          <div className="row p-4 m-1">
             <div className="col">
               <img src={logobgk} alt="Certificações" className="certificacoes-img" ref={certificacoesRef} />
             </div>
@@ -161,7 +161,7 @@ function Corpo({ language }) {
               <img src={logoframbas} alt="Certificações" className="certificacoes-img" ref={certificacoesRef} />
             </div>
           </div>
-          <div className="row">
+          <div className="row p-4 m-1">
             <div className="col">
               <img src={logobrbio} alt="Certificações" className="certificacoes-img" ref={certificacoesRef} />
             </div>
