@@ -1,0 +1,54 @@
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+
+.titulo_sobre {
+  position: absolute;
+  font-size: 3.5em;
+  font-weight: bolder;
+  font-family: "Brush Up", sans-serif;
+  text-transform: uppercase;
+  top: 20%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: white; /* ou outra cor que contraste com o fundo */
+  padding: 10px;
+}
+
+.container-principal {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.text {
+  margin-top: 20px;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+h1,
+h5 {
+  color: #59133c;
+  margin: 50px;
+}
+
+.titulo_linha_tempo,
+.titulo_mvv {
+
+  font-size: 1.5em;
+  font-weight: bolder;
+  font-family: "Brush Up", sans-serif;
+  text-transform: uppercase;
+  font-size: 3.4rem;
+}

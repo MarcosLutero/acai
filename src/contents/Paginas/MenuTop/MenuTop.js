@@ -94,7 +94,7 @@ function MenuTop({ onLanguageChange }) {
                 <Link className="nav-link link_paginas" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link_paginas" to="/sobre">Sobre Xingu Fruit</Link>
+                <Link className="nav-link link_paginas" to="/sobre">A Xingu Fruit</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link link_paginas" to="/produtos">Produtos</Link>
