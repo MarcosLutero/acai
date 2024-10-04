@@ -52,3 +52,107 @@ h5 {
   text-transform: uppercase;
   font-size: 3.4rem;
 }
+
+.timeline-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.year-button {
+  margin: 10px;
+  padding: 10px 20px;
+  margin-left: 40px;
+  background-color: #0d9170;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.year-button:hover {
+  background-color: #0b785a;
+}
+
+.year-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -45px;
+  width: 40px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #d3d3d3,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 5px
+  );
+  transform: translateY(-50%);
+}
+
+.year-button:last-child::after {
+  display: none;
+}
+
+.event-info {
+  text-align: left;
+  margin-top: 20px;
+  transition: opacity 0.1s ease-in; /* Adiciona transição suave */
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.event-description {
+  margin-bottom: 20px;
+}
+
+.event-description strong {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.event-description p {
+  font-size: 1em;
+}
+
+
+.col-4 .fa-icon {
+  width: 50px; /* Largura total do círculo */
+  height: 50px; /* Altura total do círculo */
+  line-height: 60px;
+  background-color: #0d9170;
+  color: white;
+  border-radius: 50%; /* Garante que seja um círculo */
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 20px; /* Espaçamento extra para aumentar o círculo */
+}
+
+
+h5 {
+  font-size: 1.25em;
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30px;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
