@@ -47,11 +47,6 @@ function MenuTop({ onLanguageChange }) {
     }
   };
 
-  const handleClick = () => {
-    // Ação a ser executada quando o link ou botão for clicado
-    console.log("Link clicado");
-  };
-
   return (
     <>
       <nav className="navbar navbar-expand-lg secondary_nav">
