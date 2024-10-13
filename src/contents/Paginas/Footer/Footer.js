@@ -11,46 +11,46 @@ function Footer() {
                 <div className="footer-section">
                     <h4><strong>Empresa</strong></h4>
                     <ul>
-                        <li><a href="#"> A Xingu Fruit</a></li>
-                        <li><a href="#"> Produtos</a></li>
-                        <li><a href="#">Noticias</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li>A Xingu Fruit</li>
+                        <li> Produto</li>
+                        <li>Noticias</li>
+                        <li>Contato</li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4><strong>Produtos</strong></h4>
                     <ul>
-                        <li><a href="#">Açaí</a></li>
-                        <li><a href="#">Sorbet</a></li>
-                        <li><a href="#">Polpas de Frutas</a></li>
-                        <li><a href="#">Exportação</a></li>
+                        <li>Açaí</li>
+                        <li>Sorbre</li>
+                        <li>Polpas de Frutas</li>
+                        <li>Exportação</li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4><strong>Frutas do Xingu</strong></h4>
                     <ul>
-                        <li><a href="#">Contato@xingufruit.com.br</a></li>
-                        <li><a href="#">Rodovia Castanhal/inhangapi KM 07 - SN CEP 68746-889 Castanhal-PA</a></li>
-                        <li><a href="#">(85) 99630-8944</a></li>
-                        <li><a href="#">28.151.393/0002-34 </a></li>
-                        <li><a href="#">Xingu Fruit Polpas de Frutas Indústria e comercio LTDA</a></li>
+                        <li>Contato@xingufruit.com.br</li>
+                        <li>Rodovia Castanhal/inhangapi KM 07 - SN CEP 68746-889 Castanhal-PA</li>
+                        <li>(85) 99630-8944</li>
+                        <li>28.151.393/0002-34 </li>
+                        <li>Xingu Fruit Polpas de Frutas Indústria e comercio LTDA</li>
                     </ul>
                 </div>
 
                 <div className="footer-section">
                     <h4><strong>Siga-nos nas redes sociais</strong></h4>
                     <div className="d-flex justify-content-evenly align-items-center social-icons">
-                        <a href="#" className="social-icon">
+                       <div className="social-icon">
                             <i className="fab fa-linkedin" />
-                        </a>
-                        <a href="#" className="social-icon">
+                        </div>
+                       <div className="social-icon">
                             <i className="fab fa-facebook" />
-                        </a>
-                        <a href="#" className="social-icon">
+                        </div>
+                       <div className="social-icon">
                             <i className="fab fa-instagram" />
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

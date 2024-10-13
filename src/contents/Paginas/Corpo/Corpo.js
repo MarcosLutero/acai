@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import imgInicial from "../../images/IMAGEM-XINGU-site-organis-açaí.jpg";
 import "./index.css";
 import acaiXingu from "../../images/acai.jpg";
@@ -28,7 +28,7 @@ function Corpo({ language }) {
     const observerOptions = {
       threshold: 0.1 // 10% visível para ativar a transição
     };
-
+  
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -36,27 +36,37 @@ function Corpo({ language }) {
         }
       });
     }, observerOptions);
-
-    // Observar os títulos, descrições e imagens
-    if (acaiXinguRef.current) observer.observe(acaiXinguRef.current);
-    if (produtosRef.current) observer.observe(produtosRef.current);
-    if (certificacoesRef.current) observer.observe(certificacoesRef.current);
-    if (tituloRef1.current) observer.observe(tituloRef1.current);
-    if (descricaoRef1.current) observer.observe(descricaoRef1.current);
-    if (tituloRef2.current) observer.observe(tituloRef2.current);
-    if (descricaoRef2.current) observer.observe(descricaoRef2.current);
-
+  
+    // Criando variáveis locais para cada ref
+    const acaiXinguElement = acaiXinguRef.current;
+    const produtosElement = produtosRef.current;
+    const certificacoesElement = certificacoesRef.current;
+    const tituloElement1 = tituloRef1.current;
+    const descricaoElement1 = descricaoRef1.current;
+    const tituloElement2 = tituloRef2.current;
+    const descricaoElement2 = descricaoRef2.current;
+  
+    // Observar os elementos
+    if (acaiXinguElement) observer.observe(acaiXinguElement);
+    if (produtosElement) observer.observe(produtosElement);
+    if (certificacoesElement) observer.observe(certificacoesElement);
+    if (tituloElement1) observer.observe(tituloElement1);
+    if (descricaoElement1) observer.observe(descricaoElement1);
+    if (tituloElement2) observer.observe(tituloElement2);
+    if (descricaoElement2) observer.observe(descricaoElement2);
+  
     // Cleanup
     return () => {
-      if (acaiXinguRef.current) observer.unobserve(acaiXinguRef.current);
-      if (produtosRef.current) observer.unobserve(produtosRef.current);
-      if (certificacoesRef.current) observer.unobserve(certificacoesRef.current);
-      if (tituloRef1.current) observer.unobserve(tituloRef1.current);
-      if (descricaoRef1.current) observer.unobserve(descricaoRef1.current);
-      if (tituloRef2.current) observer.unobserve(tituloRef2.current);
-      if (descricaoRef2.current) observer.unobserve(descricaoRef2.current);
+      if (acaiXinguElement) observer.unobserve(acaiXinguElement);
+      if (produtosElement) observer.unobserve(produtosElement);
+      if (certificacoesElement) observer.unobserve(certificacoesElement);
+      if (tituloElement1) observer.unobserve(tituloElement1);
+      if (descricaoElement1) observer.unobserve(descricaoElement1);
+      if (tituloElement2) observer.unobserve(tituloElement2);
+      if (descricaoElement2) observer.unobserve(descricaoElement2);
     };
   }, []);
+  
 
   // Traduções locais no componente
   const translations = {
