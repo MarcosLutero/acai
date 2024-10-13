@@ -94,7 +94,13 @@ function MenuTop({ onLanguageChange }) {
 
       <nav className={`navbar navbar-expand-lg main_nav ${isSticky ? "sticky-nav" : ""}`}>
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <a
+            className="navbar-brand"
+            onClick={e => {
+              e.preventDefault();
+              handleClick();
+            }}
+          >
             <img className="img_logo" src={logo} alt="logo" />
           </a>
           <div className="collapse navbar-collapse" id="navbarNav">
