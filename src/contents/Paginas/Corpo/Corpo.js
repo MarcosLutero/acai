@@ -118,9 +118,9 @@ function Corpo({ language }) {
               <p>{translatedTexts.description2}</p>
             </div>
             <div>
-              <a className="botao_verde">
+            <div className="botao_verde">
                 <span className="btn_txt">Saiba Mais</span>
-              </a>
+              </div>
             </div>
           </div>
           <div className="col-md-7">
@@ -142,9 +142,9 @@ function Corpo({ language }) {
                 <p>{translatedTexts.produtosDescription2}</p>
               </div>
               <div className="mt-2">
-                <a className="botao_verde">
+                <div className="botao_verde">
                   <span className="btn_txt">Saiba Mais</span>
-                </a>
+                </div>
               </div>
             </div>
           </div>
